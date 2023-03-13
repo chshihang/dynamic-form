@@ -1,39 +1,7 @@
 <div [formGroup]="formGroup" [ngSwitch]="form.controlType">
-  <app-dynamic-textbox *ngSwitchCase="'textbox'" [formGroup]="formGroup" [form]="form"></app-dynamic-textbox>
-  <app-dynamic-dropdown *ngSwitchCase="'dropdown'" [formGroup]="formGroup" [form]="form"></app-dynamic-dropdown>
-  <app-dynamic-checkbox *ngSwitchCase="'checkbox'" [formGroup]="formGroup" [form]="form"></app-dynamic-checkbox>
-  <app-dynamic-radio *ngSwitchCase="'radio'" [formGroup]="formGroup" [form]="form"></app-dynamic-radio>
-<!--  <ng-container *ngSwitchCase="'textbox'">-->
-<!--    <label [for]="form.key">{{ form.label }}</label>-->
-<!--    <input [formControlName]="form.key"-->
-<!--           [id]="form.key" [type]="form.type">-->
-<!--  </ng-container>-->
-
-<!--  <ng-container *ngSwitchCase="'dropdown'">-->
-<!--    <label [for]="form.key">{{ form.label }}</label>-->
-<!--    <select [formControlName]="form.key" [id]="form.key">-->
-<!--      <option *ngFor="let opt of form.options" [value]="opt.key"> {{ opt.value }}</option>-->
-<!--    </select>-->
-<!--  </ng-container>-->
-
-<!--  <ng-container *ngSwitchCase="'checkbox'">-->
-<!--    <label>-->
-<!--      {{ form.label }}-->
-<!--      <input type="checkbox" [name]="form.key" [formControlName]="form.key" [value]="form.value"/>-->
-<!--    </label>-->
-<!--  </ng-container>-->
-
-<!--  <ng-container *ngSwitchCase="'radio'">-->
-<!--    <h3>{{form.label}}</h3>-->
-<!--    <label *ngFor="let option of form.options">-->
-<!--      <input type="radio"-->
-<!--             [name]="option.key"-->
-<!--             [formControlName]="option.key"-->
-<!--             [value]="option.value"-->
-<!--      >-->
-<!--      {{option.key}}-->
-<!--    </label>-->
-<!--  </ng-container>-->
-
+  <app-dynamic-textbox *ngSwitchCase="'textbox'" [form]="form"></app-dynamic-textbox>
+  <app-dynamic-dropdown *ngSwitchCase="'dropdown'" [form]="form"></app-dynamic-dropdown>
+  <app-dynamic-checkbox *ngSwitchCase="'checkbox'" [form]="form"></app-dynamic-checkbox>
+  <app-dynamic-radio *ngSwitchCase="'radio'" [form]="form"></app-dynamic-radio>
   <div style="color: red" *ngIf="!isValid">{{form.label}}不能为空</div>
 </div>
