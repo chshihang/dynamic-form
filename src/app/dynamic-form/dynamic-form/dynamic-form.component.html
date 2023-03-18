@@ -2,7 +2,7 @@
   <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
 
     <div *ngFor="let form of forms" class="form-row">
-      <app-dynamic-form-unit [formGroup]="formGroup" [form]="form"></app-dynamic-form-unit>
+      <app-dynamic-form-unit [form]="form"></app-dynamic-form-unit>
     </div>
 
     <div class="form-row">
